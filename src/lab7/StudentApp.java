@@ -29,10 +29,11 @@ public class StudentApp {
         s3.setName(sc.nextLine());
         System.out.print("Age: ");
         s3.setAge(sc.nextInt());
-        System.out.print("Gender: ");
-        s3.setGender(sc.nextLine());
         System.out.print("Height: ");
         s3.setHeight(sc.nextDouble());
+        System.out.print("Gender: ");
+        s3.setGender(sc.nextLine());
+
 
 
         return s3;
