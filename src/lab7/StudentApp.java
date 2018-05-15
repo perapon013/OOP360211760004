@@ -1,10 +1,13 @@
 package lab7;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class StudentApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student s1 = new Student();
         s1.setName("MIT");
         s1.setAge(22);
@@ -17,9 +20,25 @@ public class StudentApp {
 
         //input data from user
         Student s3 = new Student();
-        s3 = inputData(s3);
+        //s3 = inputData(s3);//s
+        s3 = inputDataBuffer(s3);
         System.out.println(s3.toString());
 
+    }
+
+    private static Student inputDataBuffer(Student s) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Name: ");
+        s.setName(reader.readLine());
+        System.out.print("Age: ");
+        s.setAge(Integer.parseInt(reader.readLine()));
+        System.out.print("Gender: ");
+        s.setGender(reader.readLine());
+        System.out.print("Height: ");
+        s.setHeight(Double.parseDouble(reader.readLine()));
+
+
+        return s;
     }
 
     private static Student inputData(Student s3) {
