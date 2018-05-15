@@ -21,7 +21,7 @@ public class StudentAppArrayList {
             System.out.println("Student info "+(i+1)+": ");
             System.out.println("Name: "+myList.get(i).getName());
             System.out.println("Age: "+myList.get(i).getAge());
-            System.out.println("Gender: "+myList.get(i).getAge());
+            System.out.println("Gender: "+myList.get(i).getGender());
             System.out.println("Height: "+myList.get(i).getHeight());
         }
     }

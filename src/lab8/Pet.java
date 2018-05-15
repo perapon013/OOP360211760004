@@ -3,6 +3,7 @@ package lab8;
 public abstract class Pet {
     private String name;
     private int age;
+    private String general;
 
     public abstract void makeNoise();
 
@@ -10,7 +11,8 @@ public abstract class Pet {
     public String toString() {
         return "Pet{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
+                ", age=" + age + '\'' +
+                ", general=" + general +
                 '}';
     }
 
@@ -30,4 +32,11 @@ public abstract class Pet {
         this.age = age;
     }
 
+    public String getGeneral() {
+        return general;
+    }
+
+    public void setGeneral(String general) {
+        this.general = general;
+    }
 }//Class
